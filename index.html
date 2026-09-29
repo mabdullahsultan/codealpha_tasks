@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Responsive Image Gallery</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<h1>My Image Gallery</h1>
+<p>Responsive gallery with filters and lightbox</p>
+</header>
+
+<div class="filters">
+<button class="active" data-filter="all">All</button>
+<button data-filter="nature">Nature</button>
+<button data-filter="city">City</button>
+<button data-filter="animals">Animals</button>
+</div>
+
+<main class="gallery">
+<img data-cat="nature" src="https://images.unsplash.com/photo-1500534623283-312aade485b7?w=800" alt="Nature">
+<img data-cat="city" src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=800" alt="City">
+<img data-cat="animals" src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=800" alt="Dog">
+<img data-cat="nature" src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800" alt="Forest">
+<img data-cat="city" src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=800" alt="City">
+<img data-cat="animals" src="https://images.unsplash.com/photo-1517849845537-4d257902454a?w=800" alt="Dog">
+</main>
+
+<div id="lightbox" class="lightbox">
+<button id="close">×</button>
+<button id="prev">❮</button>
+<img id="preview" alt="">
+<button id="next">❯</button>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

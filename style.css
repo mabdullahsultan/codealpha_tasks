@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #f4f7fb;
+    color: #222
+}
+
+header {
+    text-align: center;
+    padding: 35px 15px
+}
+
+.filters {
+    text-align: center;
+    margin-bottom: 25px
+}
+
+.filters button {
+    padding: 10px 18px;
+    margin: 4px;
+    border: 0;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: .3s
+}
+
+.filters button:hover,
+.filters .active {
+    background: #222;
+    color: #fff
+}
+
+.gallery {
+    width: 92%;
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+    padding-bottom: 40px
+}
+
+.gallery img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: .3s
+}
+
+.gallery img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 25px #0003
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: #000d;
+    align-items: center;
+    justify-content: center
+}
+
+.lightbox.show {
+    display: flex
+}
+
+.lightbox img {
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 12px
+}
+
+.lightbox button {
+    position: absolute;
+    background: none;
+    border: 0;
+    color: #fff;
+    font-size: 42px;
+    cursor: pointer
+}
+
+.lightbox #close {
+    top: 15px;
+    right: 25px
+}
+
+.lightbox #prev {
+    left: 25px
+}
+
+.lightbox #next {
+    right: 25px
+}
+
+@media(max-width:600px) {
+    .gallery img {
+        height: 190px
+    }
+
+    .lightbox img {
+        max-width: 88%
+    }
+}
